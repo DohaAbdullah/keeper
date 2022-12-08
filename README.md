@@ -69,3 +69,41 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 # keeper
+
+
+```JS
+function Input(props) {
+  return (
+    <input
+      className={`login-input ${props.className || ""}`}
+      placeholder={props.placeholder}
+      name={props.name}
+      type={props.type}
+    />
+  );
+}
+
+export default Input;```
+
+
+```JS
+import Input from "../components/input";
+
+function Login() {
+  return (
+    <div className="login-body">
+      <div className="login-container">
+        <div className="form-container">
+          <h1 className="login-hello-title">Hello</h1>
+          <form>
+            <Input placeholder="email" name="email" type="text" />
+            <Input placeholder="Password" name="password" type="password" />
+            <button className="login-button" type="submit">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Login;```
