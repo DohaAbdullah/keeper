@@ -1,4 +1,4 @@
-import Input from "../components/input";
+import Form from "../components/form";
 
 function Login() {
   return (
@@ -6,11 +6,7 @@ function Login() {
       <div className="login-container">
         <div className="form-container">
           <h1 className="login-hello-title">Hello</h1>
-          <form>
-            <Input placeholder="email" name="email" type="text" />
-            <Input placeholder="Password" name="password" type="password" />
-            <button className="login-button" type="submit">Login</button>
-          </form>
+          <Form />
         </div>
       </div>
     </div>

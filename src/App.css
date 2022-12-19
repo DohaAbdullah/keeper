@@ -9,6 +9,10 @@ body {
   background-color: #eee;
 }
 
+.app-button {
+  background-color: transparent;
+}
+
 .header {
   background-color: #f5ba13;
   height: 70px;
@@ -155,3 +159,63 @@ body {
   color: #fff;
   font-weight: 500;
 } */
+
+.todolist-container {
+  background-color: #ead395;
+  height: 100vh;
+  padding: 10% 40%;
+}
+
+.list-container {
+  background-color: #eee;
+  width: 300px;
+  height: auto;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #302f2f;
+  background-image: radial-gradient(#bfc0c1 5%, transparent 0);
+  background-size: 40px 40px;
+}
+
+.todolist-title-container {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.todolist-title {
+  transform: rotate(2deg);
+  padding: 10px 10px;
+  border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
+  background-color: #fdcb6e;
+  font-size: 25px;
+  width: fit-content;
+  text-align: center;
+  position: relative;
+  font-family: "Architects Daughter", cursive;
+}
+
+.input-button-container {
+  display: flex;
+}
+
+.todolist-input {
+  border: #ccc;
+  border-bottom: 4px dotted #f5ba13;
+  margin: 10px;
+  margin-right: 15px;
+  width: 150px;
+  color: #000;
+}
+
+.add-button {
+  background-color: transparent;
+  width: 50px;
+  height: 40px;
+  border-radius: 7%;
+  margin-top: 13px;
+  font-family: "Architects Daughter", cursive;
+}
+
+.unorder-list{
+  padding: 30px;
+}

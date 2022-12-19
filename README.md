@@ -87,23 +87,44 @@ export default Input;```
 
 
 ```JS
-import Input from "../components/input";
+ import Input from "../components/input";
+import Button from "../components/button";
+import { useState } from "react";
 
-function Login() {
+function ToDoList() {
+  const [listItems, setListItems] = useState([]);
+
+  function addItem() {
+    console.log("added");
+  }
+
+  function handleOnChange(e) {
+    const { value } = e.target;
+    console.log(value);
+    setListItems(value);
+    console.log(listItems);
+  }
+
+
+
+  // const items = listItems.map((item) => <li>item</li>);
+
   return (
-    <div className="login-body">
-      <div className="login-container">
-        <div className="form-container">
-          <h1 className="login-hello-title">Hello</h1>
-          <form>
-            <Input placeholder="email" name="email" type="text" />
-            <Input placeholder="Password" name="password" type="password" />
-            <button className="login-button" type="submit">Login</button>
-          </form>
+    <div className="todolist-container">
+      <div className="list-container">
+        <div className="todolist-title-container">
+          <p className="todolist-title">To-Do List</p>
+        </div>
+        <div className="input-button-container">
+          <Input className="todolist-input" onChange={handleOnChange} />
+          <Button className="add-button" type="submit " onClick={addItem}>
+            Add
+          </Button>
         </div>
       </div>
     </div>
   );
 }
 
-export default Login;```
+export default ToDoList;
+```
