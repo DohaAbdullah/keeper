@@ -216,6 +216,18 @@ body {
   font-family: "Architects Daughter", cursive;
 }
 
-.unorder-list{
+.unorder-list {
   padding: 30px;
+}
+
+.list-text {
+  font-family: "Architects Daughter", cursive;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.close-icon {
+  padding-top: 5px;
 }

@@ -1,20 +1,37 @@
 import Input from "../components/input";
 import Button from "../components/button";
 import { useState } from "react";
+import CloseIcon from "../icons/closeIcon";
+
+let dummyData = [
+  { id: 1, value: "buy milk" },
+  { id: 2, value: "work" },
+  { id: 3, value: "sleep" },
+];
+
+let nextId = 0;
 
 function ToDoList() {
   const [inputValue, setInputValue] = useState();
-  const [itemsList, setItemsList] = useState([]);
+  const [itemsList, setItemsList] = useState([{ id: nextId, value: "" }]);
 
   function addItem() {
-    setItemsList((prev) =>[...prev , inputValue]);
+    console.log(nextId++);
+    setItemsList((prev) => [...prev , { id: nextId , value: inputValue }]);
   }
 
   function handleOnChange(e) {
     const { value } = e.target;
-    console.log(value);
     setInputValue(value);
+    console.log(value);
   }
+
+  // function deleteItem(e) {
+  //   const { id } = e.target;
+  //   console.log(id);
+  //   const filteredItems = itemsList.filter((item) => item.id !== id);
+  //   setItemsList(filteredItems);
+  // }
 
   return (
     <div className="todolist-container">
@@ -28,9 +45,22 @@ function ToDoList() {
             Add
           </Button>
         </div>
-        <ul className="unorder-list">
-          {itemsList.map((item , index) => <li key={index}>{item}</li>)}
-        </ul>
+        <div className="list-items-wrapper">
+          <ul className="unorder-list">
+            {itemsList.map((item, index) => (
+              <li className="list-text" key={index}>
+                {item.value}
+                <CloseIcon
+                  onClick={() => {
+                    console.log(item.id);
+                    setItemsList(itemsList.filter((ids) => ids.id !== item.id));
+                  }}
+                  id={item.id}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
