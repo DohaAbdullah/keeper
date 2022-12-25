@@ -21,6 +21,9 @@ function Header() {
           </Link>
         )}
       </div>
+      <div className="todolist-navigator-container">
+        <Link to="/todolist" className="todolist-link">To-Do List</Link>
+      </div>
     </div>
   );
 }

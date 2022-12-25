@@ -152,6 +152,23 @@ body {
   font-weight: 500;
 }
 
+.todolist-navigator-container {
+  position: absolute;
+  top: 22px;
+  right: 111px;
+  height: 30px;
+  width: 87px;
+}
+
+.todolist-link {
+  text-decoration: none;
+  position: relative;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+}
+
 /* .login-navigator {
   position: relative;
   padding: 5px;
@@ -205,6 +222,7 @@ body {
   margin-right: 15px;
   width: 150px;
   color: #000;
+  font-family: "Architects Daughter", cursive;
 }
 
 .add-button {
