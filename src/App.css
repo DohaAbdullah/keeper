@@ -7,6 +7,7 @@
 
 body {
   background-color: #eee;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }
 
 .app-button {
@@ -248,4 +249,83 @@ body {
 
 .close-icon {
   padding-top: 5px;
+}
+
+.input-note {
+  background: #ffffff;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #ededed;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 0;
+  resize: none;
+  transition: border-color 150ms ease;
+  width: 100%;
+  text-align: left;
+  color: #302f2f;
+}
+
+.textarea {
+  background: #ffffff;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #ededed;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 0;
+  resize: none;
+  transition: border-color 150ms ease;
+  width: 100%;
+  color: #302f2f;
+}
+
+.create-note-textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+.add-note-container {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+.add-note-button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #fff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.add-note-button:hover {
+  background-color: #bfc0c1;
+}
+
+.delete-note-button {
+  float: right;
+  background-color: #fcfcfc;
+  color: #f5ba13;
+  border: none;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
 }
